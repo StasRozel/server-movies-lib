@@ -1,0 +1,19 @@
+{
+  "name": "catalog_movies",
+  "version": "1.0.0",
+  "description": "learning dev-stack MERN",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon server/index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \" npm run server\" \" npm run client\""
+  },
+  "author": "Stas Rozel",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1"
+  }
+}
