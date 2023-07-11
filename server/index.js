@@ -4,13 +4,13 @@ const Movie = require('./models/movie')
 
 const PORT = process.env.PORT || 3001
 
-const URL = "mongodb://0.0.0.0:27017/moviebox"
+const URL = "mongodb+srv://rozelstas:qwerty123@cluster0.tlm43di.mongodb.net/?retryWrites=true&w=majority"
 
 const app = express();
 app.use(express.json());
 
 mongoose
-    .connect(URL)
+    .connect(URL, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log("Connected to MongoDB"))
     .catch((err) => console.log(`DB connection error: ${err}`))
 
