@@ -9,7 +9,7 @@ const URL = "mongodb+srv://rozelstas:qwerty123@cluster0.tlm43di.mongodb.net/?ret
 const app = express();
 app.use(express.json());
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://movies-lib-2zxy.onrender.com"); // Разрешить этот домен
+    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
